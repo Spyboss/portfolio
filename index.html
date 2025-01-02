@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uminda Aberathne - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        /* Reset and Font Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
+            font-family: 'Roboto', sans-serif;
             color: #fff;
-            line-height: 1.6;
             height: 100vh;
             overflow: hidden;
             position: relative;
         }
 
-        /* Spline background styles */
-        #spline-bg {
-            position: fixed;
+        /* 3D Background */
+        .background {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -31,73 +31,66 @@
             z-index: -1;
         }
 
+        /* Content Container */
         .container {
-            max-width: 800px;
-            padding: 40px;
-            text-align: center;
-            margin: auto;
             position: relative;
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent */
+            text-align: center;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .bio p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .contact-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-        .contact-icons a {
-            font-size: 2rem;
-            margin: 0 15px;
-            color: #58a6ff;
-            text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-        .contact-icons a:hover {
-            color: #fff;
-            transform: scale(1.2);
-        }
-
+        /* Profile Image */
         .profile-photo {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
             margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Titles and Text */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Icons */
+        .icons {
+            margin-top: 20px;
+        }
+        .icons a {
+            color: #58a6ff;
+            font-size: 2rem;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .icons a:hover {
+            color: #fff;
+            transform: scale(1.2);
         }
     </style>
 </head>
 <body>
-    <!-- Spline Embed -->
-    <iframe src='https://my.spline.design/applevisionpro3dportfolioconcept-599acc5035ebb0b203e480bf572bdd81/' 
-        frameborder='0' 
-        width='100%' 
-        height='100%' 
-        style="position: fixed; top: 0; left: 0; z-index: -1; overflow: hidden;"></iframe>
+    <!-- 3D Animation Background -->
+    <iframe class="background" src="https://my.spline.design/applevisionpro3dportfolioconcept-599acc5035ebb0b203e480bf572bdd81/" frameborder="0"></iframe>
 
-    <iframe id="spline-bg" src="https://my.spline.design/applevisionpro3dportfolioconcept-599acc5035ebb0b203e480bf572bdd81/" frameborder="0"></iframe>
-
+    <!-- Portfolio Content -->
     <div class="container">
         <img src="https://telegra.ph/file/26feaa7632b6e65bc1ab9.jpg" alt="Profile Photo" class="profile-photo">
         <h1>Uminda Aberathne</h1>
-        <div class="bio">
-            <p>Age: 20</p>
-        </div>
-        <div class="contact-icons">
+        <p>Age: 20</p>
+        <p>Welcome to my portfolio! Let's build amazing things together.</p>
+        <div class="icons">
             <a href="https://wa.me/94713427470" target="_blank"><i class="fab fa-whatsapp"></i></a>
             <a href="https://www.instagram.com/uhadev007" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/uminda.aberathne" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -105,4 +98,3 @@
     </div>
 </body>
 </html>
-//
